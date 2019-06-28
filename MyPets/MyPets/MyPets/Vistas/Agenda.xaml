@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyPets.Vistas.Agenda"
+             BackgroundImage="fondo2"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="Center"
+                Text="Agenda Diaria"
+                   TextColor="White"
+                FontAttributes="Bold"
+                FontSize="Large"/>
+            <Frame VerticalOptions="Start"
+                 CornerRadius="10"
+                WidthRequest="150"
+                HeightRequest="450"
+                Margin="12,20,12,10"
+                HasShadow = "True"
+                OutlineColor = "Gray">
+                <ScrollView
+            Orientation="Vertical"
+            BindingContext="{Binding Agenda}">
+                    <StackLayout
+                    BackgroundColor="White"
+                    Padding="5" HorizontalOptions="Center">
+                   
+                        <Grid Padding="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Label
+                         Text="Tarea #1: &#x1f63a;"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="0" />
+                            <Entry
+                         Grid.Column="1"
+                         Grid.Row="0"/>
+                            <Label
+                         Text="Tarea #2: &#x1f63a;"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="1" />
+                            <Entry
+                         Grid.Column="1"
+                         Grid.Row="1"/>
+                            <Label
+                         Text="Tarea #3: &#x1f63a;"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="2" />
+                            <Entry
+                         Grid.Column="1"
+                         Grid.Row="2"/>
+                            <Label
+                         Text="Tarea #4: &#x1f63a;"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="3" />
+                            <Entry
+                         Grid.Column="1"
+                         Grid.Row="3"/>
+                            <Label
+                         Text="Tarea #5: &#x1f63a;"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="4" />
+                            <Entry
+                         Grid.Column="1"
+                         Grid.Row="4"/>
+                            <Label
+                         Text="Tarea #6: &#x1f63a;"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="5" />
+                            <Entry
+                         Grid.Column="1"
+                         Grid.Row="5"/>
+                            <Label
+                         Text="Tarea #7: &#x1f63a;"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="6" />
+                            <Entry
+                         Grid.Column="1"
+                         Grid.Row="6"/>
+                            <Label
+                         Text="Tarea #8: &#x1f63a;"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="7" />
+                            <Entry
+                         Grid.Column="1"
+                         Grid.Row="7"/>
+                        </Grid>
+                        
+                  
+                    <Button
+                        Text="Añadir Agenda"
+                        BorderRadius="2"
+                        BackgroundColor="#0E3042"
+                        BorderWidth="2"
+                        BorderColor="Transparent"/>
+                    <Button
+                        Text="Ver Agenda"
+                        BorderRadius="2"
+                        BackgroundColor="Transparent"
+                        BorderWidth="2"
+                        BorderColor="#0E3042"/>
+                </StackLayout>
+                </ScrollView>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

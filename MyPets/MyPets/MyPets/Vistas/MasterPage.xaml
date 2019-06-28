@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:MyPets.Vistas"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="MyPets.Vistas.MasterPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundImage="fondo">
+            <Grid BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid BackgroundColor="#0E3042">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Padding="0,10,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Source="ico.png" Aspect="AspectFill" WidthRequest="80" HeightRequest="80" />
+                        <Label Text="Usuario" TextColor="White" FontSize="Large" FontAttributes="Bold" x:Name="NomUsuario"/>
+                    </StackLayout>
+                </Grid>
+                <StackLayout Margin="10" Padding="10" Grid.Row="1" Spacing="15" BackgroundColor="White">
+                    <ListView x:Name="navigationDrawerList"  SeparatorVisibility="Default" BackgroundColor="White" ItemSelected="OnMenuItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <!-- Main design for our menu items -->
+                                    <StackLayout VerticalOptions="Center" Orientation="Horizontal"  Spacing="3" BackgroundColor="LightGray">
+                                        <Image Source="{Binding Icon}" WidthRequest="30" HeightRequest="30" VerticalOptions="Center" />
+                                        <Label Text="{Binding Title}" FontSize="Medium" VerticalOptions="Center" TextColor="Black" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Grid>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage></NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

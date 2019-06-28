@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyPets.Vistas.Grafica"
+             BackgroundImage="fondo2"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="Center"
+                Text="Gráficas Mensuales"
+                   TextColor="White"
+                FontAttributes="Bold"
+                FontSize="Large"/>
+            <Frame VerticalOptions="Start"
+                 CornerRadius="10"
+                WidthRequest="150"
+                HeightRequest="300"
+                Margin="12,20,12,10"
+                HasShadow = "True"
+                OutlineColor = "Gray">
+                <StackLayout
+                    BackgroundColor="White"
+                    Padding="5" HorizontalOptions="Center">
+                    <Grid Padding="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+
+                        </Grid.RowDefinitions>
+                        <Label
+                         Text="Peso:"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="0" />
+                        <Entry
+                         Grid.Column="1"
+                         Grid.Row="0"/>
+                        <Label
+                         Text="Altura:"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="1" />
+                        <Entry
+                         Grid.Column="1"
+                         Grid.Row="1"/>
+                    </Grid>
+                    <Button
+                        Text="Añadir Datos"
+                        BorderRadius="2"
+                        BackgroundColor="#0E3042"
+                        BorderWidth="2"
+                        BorderColor="Transparent"/>
+                    <Button
+                        Text="Ver Graficos"
+                        BorderRadius="2"
+                        BackgroundColor="Transparent"
+                        BorderWidth="2"
+                        BorderColor="#0E3042"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

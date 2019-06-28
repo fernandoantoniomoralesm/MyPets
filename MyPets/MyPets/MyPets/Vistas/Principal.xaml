@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyPets.Vistas.Principal"
+             BackgroundImage="fondo"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <StackLayout Padding="15">
+        <Grid Padding="15" VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image
+                Source="inicio"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                HeightRequest="300"
+                WidthRequest="300"
+                Grid.Column="0"
+                Grid.Row="0"/>
+            <Label
+                Text="Cargando..."
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+               Grid.Column="0"
+                Grid.Row="1"/>
+            <Label
+            x:Name="Mainlabel"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            TextColor="White"
+            FontAttributes="Bold"
+                Grid.Column="0"
+                Grid.Row="2"/>
+
+        </Grid>
+        <ProgressBar
+                x:Name="MainProgressBar"
+                Progress="0.0"
+                WidthRequest="300"
+                HeightRequest="20"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                ProgressColor="White"/>
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyPets.Vistas.Registrarse"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImage="fondo2"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView
+            Orientation="Vertical"
+            BindingContext="{Binding Registrarse}">
+            <StackLayout>
+                <Frame
+                CornerRadius="10"
+                WidthRequest="150"
+                HeightRequest="300"
+                VerticalOptions="Start"
+                Margin="12,80,12,0"
+                HasShadow = "True"
+                OutlineColor = "Gray">
+
+                    <StackLayout
+                    BackgroundColor="White"
+                    Padding="15">
+                        <Grid Padding="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+
+                    </Grid.RowDefinitions>
+                            <Image
+                    Source="usuari"
+                    HeightRequest="15"
+                    WidthRequest="15"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    VerticalOptions="Center"/>
+                            <Entry
+                    Placeholder="Enter your User..."
+                     Grid.Column="1"
+                    Grid.Row="0"
+                    Text="{Binding Usuario,Mode=TwoWay}"/>
+                    <Image
+                   Source="gmail"
+                    HeightRequest="15"
+                    WidthRequest="15"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    VerticalOptions="Center"/>
+                            <Entry
+                    Placeholder="Email@example.com"
+                     Grid.Column="1"
+                    Grid.Row="1"
+                    Text="{Binding Email,Mode=TwoWay}"/>
+                        </Grid>
+                        <Button
+                    Text="Registrarse"
+                    FontAttributes="Bold"
+                            BorderRadius="2"
+                        BackgroundColor="#0E3042"
+                        BorderWidth="2"
+                        BorderColor="Transparent"
+                    WidthRequest="130"
+                    HeightRequest="45"
+                    Command="{Binding RegistrarUsuarioCommand}"/>
+                        <Button
+                    Text="Salir"
+                    FontAttributes="Bold"
+                    BorderRadius="2"
+                        BackgroundColor="Transparent"
+                        BorderWidth="2"
+                        BorderColor="#0E3042"
+                    WidthRequest="130"
+                    HeightRequest="45"
+                    Command="{Binding CancelarCommand}"/>
+                    </StackLayout>
+                    
+                </Frame>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

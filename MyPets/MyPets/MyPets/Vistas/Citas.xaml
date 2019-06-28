@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyPets.Vistas.Citas"
+             BackgroundImage="fondo2"
+             NavigationPage.HasNavigationBar="True"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label
+                HorizontalOptions="Center"
+                Text="Citas"
+                TextColor="White"
+                FontSize="Large"
+                FontAttributes="Bold"/>
+            <Frame
+                VerticalOptions="Start"
+                 CornerRadius="10"
+                Margin="12,20,12,10"
+                HasShadow = "True"
+                OutlineColor = "Gray">
+                <ScrollView
+            Orientation="Vertical">
+                    <StackLayout
+                    BackgroundColor="White"
+                    Padding="15">
+                  
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Label
+                                Text="Nombre: "
+                                FontAttributes="Bold"
+                                Grid.Column="0"
+                                Grid.Row="0"/>
+                            <Label
+                                Grid.Column="1"
+                                Grid.Row="0"/>
+                            <Label
+                                Text="Motivo: "
+                                FontAttributes="Bold"
+                                Grid.Column="0"
+                                Grid.Row="1"/>
+                            <Editor
+                                HeightRequest="100"
+                                Placeholder="Ejemplo  Vacunas..."
+                                Text="{Binding MotivoConsulta,Mode=TwoWay}"
+                                Grid.Column="1"
+                                Grid.Row="1"/>
+                            <Label
+                                Text="Diagnostico:"
+                                FontAttributes="Bold"
+                                Grid.Column="0"
+                                Grid.Row="2"/>
+                            <Editor
+                                HeightRequest="100"
+                                Placeholder="Ejemplo: Presentaba sintomas de rabia..."
+                                Text="{Binding DiagnosticoConsulta,Mode=TwoWay}"
+                                Grid.Column="1"
+                                Grid.Row="2"/>
+
+                            <Label
+                                Text="Fecha:"
+                                FontAttributes="Bold"
+                                Grid.Column="0"
+                                Grid.Row="3"/>
+
+                            <Entry
+                            Placeholder="10/3/2019"
+                            TextColor="#009688"
+                            Grid.Column="1"
+                            Grid.Row="3"/>
+
+                            <Label
+                            Text=" Hora:"
+                            FontAttributes="Bold"
+                            Grid.Column="0"
+                            Grid.Row="4"/>
+
+                            <Entry
+                            Placeholder="10:30"
+                            TextColor="#009688"
+                            Grid.Column="1"
+                            Grid.Row="4"/>
+                        </Grid>
+                        <Button
+                    Text="Agregar"
+                    FontAttributes="Bold"
+                        BorderRadius="2"
+                        BackgroundColor="#0E3042"
+                        BorderWidth="2"
+                        BorderColor="Transparent"
+                    Command="{Binding AgregarCitaCommand}"/>
+                        <Button
+                    Text="Historial"
+                    FontAttributes="Bold"
+                        BorderRadius="2"
+                        BackgroundColor="Transparent"
+                        BorderWidth="2"
+                        BorderColor="#0E3042"
+                    Command="{Binding HistorialCitaCommand}"/>
+                    
+                </StackLayout>
+                </ScrollView>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+   
+

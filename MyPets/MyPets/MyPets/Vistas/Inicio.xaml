@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyPets.Vistas.Inicio"
+             BackgroundImage="fondo2"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}">
+    <ContentPage.Content>
+
+        <ScrollView
+                BindingContext="{Binding Inicio}">
+        <StackLayout
+            Padding="15"
+            HorizontalOptions="Center"
+         >
+
+                    
+                       
+                        
+                        <Button
+                            BackgroundColor="White"
+                                WidthRequest="200"
+                            FontSize="14"
+                            BorderRadius="3"
+                                Text="Agregar Mi Mascota"
+                                FontAttributes="Bold"
+                                BorderColor="Gray"
+                                BorderWidth="2"
+                                HorizontalOptions="Center"
+                             Command="{Binding AgregarCommand}"
+                                />
+                      
+                        
+                        <Grid VerticalOptions="Center"  Padding="5">
+                            <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Frame
+                                 HasShadow = "True"
+                                 OutlineColor = "Gray"
+                                CornerRadius="10"
+                                WidthRequest="90"
+                                HeightRequest="90"
+                                Grid.Column="0"
+                                Grid.Row="0">
+                                <StackLayout>
+                                <ImageButton
+                                Source="img5"
+                                Padding="7"
+                                BackgroundColor="Transparent"
+                                HeightRequest="85"
+                                WidthRequest="85"
+                                BorderColor="Gray"
+                                BorderWidth="2"
+                                HorizontalOptions="Center"
+                                     Command="{Binding AgendaCommand}"/>
+                                <Label
+                                    VerticalOptions="Start"
+                                    FontAttributes="Bold"
+                                    Text="Agenda diaria"
+                                    HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame
+                                 HasShadow = "True"
+                                 OutlineColor = "Gray"
+                                CornerRadius="10"
+                                WidthRequest="90"
+                                HeightRequest="90"
+                                Grid.Column="1"
+                                Grid.Row="0" >
+                                <StackLayout>
+                                    <ImageButton
+                                        Padding="7"
+                                Source="img1"
+                                BackgroundColor="Transparent"
+                               HeightRequest="85"
+                                WidthRequest="85"
+                                BorderColor="Gray"
+                                BorderWidth="2"
+                                HorizontalOptions="Center"
+                                         Command="{Binding ConsultaCommand}"/>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        VerticalOptions="Start"
+                                    Text="Citas"
+                                    HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame
+                                 HasShadow = "True"
+                                 OutlineColor = "Gray"
+                                CornerRadius="10"
+                                WidthRequest="90"
+                                HeightRequest="90"
+                                Grid.Column="0"
+                                Grid.Row="1">
+                                <StackLayout>
+                                    <ImageButton
+                               BackgroundColor="Transparent"
+                                        Padding="7"
+                               Source="img2"
+                               HeightRequest="85"
+                                WidthRequest="85"
+                                BorderColor="Gray"
+                                BorderWidth="2"
+                                HorizontalOptions="Center"
+                                         Command="{Binding VeterinarioCommand}"
+                                />
+                                    <Label
+                                        FontAttributes="Bold"
+                                        VerticalOptions="Start"
+                                    Text="Veterinarios"
+                                    HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame
+                                 HasShadow = "True"
+                                 OutlineColor = "Gray"
+                                CornerRadius="10"
+                                WidthRequest="90"
+                                HeightRequest="90"
+                                Grid.Column="1"
+                                Grid.Row="1">
+                                <StackLayout>
+                                    <ImageButton
+                                        Padding="7"
+                                        BackgroundColor="Transparent"
+                                        Source="img3"
+                                        HeightRequest="85"
+                                        WidthRequest="85"
+                                        BorderColor="Gray"
+                                        BorderWidth="2"
+                                        HorizontalOptions="Center" 
+                                         Command="{Binding GraficoCommand}"
+                                />
+                                    <Label
+                                        VerticalOptions="Start"
+                                        FontAttributes="Bold"
+                                    Text="Gràficas"
+                                    HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame
+                                Grid.ColumnSpan="1"
+                                 HasShadow = "True"
+                                 OutlineColor = "Gray"
+                                CornerRadius="10"
+                                WidthRequest="90"
+                                HeightRequest="90"
+                                Grid.Row="2"
+                                HorizontalOptions="Center"
+                                >
+                                <StackLayout>
+                                    <ImageButton
+                                        Padding="7"
+                                        BackgroundColor="Transparent"
+                                        Source="img4"
+                                        HeightRequest="85"
+                                        WidthRequest="85"
+                                        BorderColor="Gray"
+                                        BorderWidth="2"
+                                        HorizontalOptions="Center"
+                                         Command="{Binding PerfilMascotaCommand}"
+                                />
+                                    <Label
+                                        VerticalOptions="Start"
+                                        FontAttributes="Bold"
+                                    Text="Perfil"
+                                    HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+
+
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

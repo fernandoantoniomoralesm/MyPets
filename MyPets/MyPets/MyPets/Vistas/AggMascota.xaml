@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:widget="clr-namespace:Android.Widget;assembly=Mono.Android"
+             x:Class="MyPets.Vistas.AggMascota"
+             BackgroundImage="fondo2"
+             >
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label HorizontalOptions="Center"
+                Text="Agregar a Mi Mascota"
+                   TextColor="White"
+                FontAttributes="Bold"
+                FontSize="Large"/>
+            <Frame
+                VerticalOptions="Start"
+                 CornerRadius="10"
+                WidthRequest="150"
+                HeightRequest="450"
+                Margin="12,20,12,10"
+                HasShadow = "True"
+                OutlineColor = "Gray">
+                <ScrollView
+            Orientation="Vertical"
+            >
+                    <StackLayout
+                    BackgroundColor="White"
+                    Padding="15">
+
+                        <Grid Padding="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Image
+                    Source="nombre"
+                    HeightRequest="15"
+                    WidthRequest="15"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    VerticalOptions="Center"/>
+                            <Entry
+                            Placeholder="Name..."
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            
+                                x:Name="nombre"/>
+                            <Image
+                             Source="especie"
+                            HeightRequest="15"
+                            WidthRequest="15"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            VerticalOptions="Center"/>
+
+                            <Entry
+                            Placeholder="Perro,Gato..."
+                            Grid.Column="1"
+                            Grid.Row="1"
+                                x:Name="especie"/>
+                            <Image
+                            Source="genero"
+                            HeightRequest="15"
+                            WidthRequest="15"
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            VerticalOptions="Center"/>
+                            <Entry
+                            Placeholder="Macho o Hembra"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                                x:Name="genero"/>
+                            <Image
+                             Source="raza"
+                    HeightRequest="15"
+                    WidthRequest="15"
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            VerticalOptions="Center"/>
+                            <Entry
+                            Placeholder="Husky,Angora..."
+                            Grid.Column="1"
+                            Grid.Row="3"
+                                x:Name="raza"/>
+                            <Label
+                            Text="Fecha nac:"
+                            FontAttributes="Bold"
+                            Grid.Column="0"
+                            Grid.Row="4"
+                            VerticalOptions="Center"/>
+                            <Entry
+                             x:Name="fechanac"
+                            Placeholder="10/3/2019"
+                            Grid.Column="1"
+                            Grid.Row="4"/>
+
+                        </Grid>
+                        <Button
+                    Text="Añadir"
+                    FontAttributes="Bold"
+                    BorderRadius="2"
+                        BackgroundColor="#0E3042"
+                        BorderWidth="2"
+                        BorderColor="Transparent"
+                   Clicked="Button_Clicked_1"/>
+                        <Button
+                    Text="Cancelar"
+                    FontAttributes="Bold"
+                    BorderRadius="2"
+                       BackgroundColor="Transparent"
+                        BorderWidth="2"
+                        BorderColor="#0E3042"
+                    />
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

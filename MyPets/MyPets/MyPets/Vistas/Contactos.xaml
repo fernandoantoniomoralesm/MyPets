@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyPets.Vistas.Contactos"
+             BackgroundImage="fondo2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="Center"
+                Text="Contactanos"
+                   TextColor="White"
+                FontAttributes="Bold"
+                FontSize="Large"/>
+            <Frame VerticalOptions="Start"
+                 CornerRadius="10"
+                WidthRequest="150"
+                HeightRequest="450"
+                Margin="12,20,12,10"
+                HasShadow = "True"
+                OutlineColor = "Gray">
+
+                <StackLayout
+                    BackgroundColor="White"
+                    Padding="5" HorizontalOptions="Center">
+                    <Image
+                            Source="inicio"
+                            WidthRequest="90"
+                            HeightRequest="90"
+                           />
+                    <Grid Padding="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Label
+                         Text="¿Quienes somos? &#x1f603;"
+                         FontSize="Medium"
+                            FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         TextDecorations="Underline"
+                         Grid.Column="0"
+                         Grid.Row="0"
+                            />
+                        <Label
+                         Text="Somos un grupo que se dedica a la creación de Aplicaciones Android para satisfacer tus necesidades."
+                         
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="1"/>
+                        <Label
+                     Text="Para cualquier consulta o sugerencia puedes enviarnos un correo!"
+                  
+                       HorizontalOptions="Center"
+                            Grid.Column="0"
+                            Grid.Row="2"/>
+                        <Label
+                         Text="Desarrolladores:"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="3"/>
+                        <Label
+                         Text="Karina Elizabeth Diaz Reymundo"
+                       
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="4"/>
+                        <Label
+                         Text="Gerardo Alvarado"
+                         HorizontalOptions="Center"
+                         Grid.Column="0"
+                         Grid.Row="5"/>
+                       
+                    </Grid>
+                    <Button
+                Text="Enviar Email"
+                Clicked="EnviarEmail"
+                      BorderRadius="2"
+                        BackgroundColor="Transparent"
+                        BorderWidth="2"
+                        BorderColor="#0E3042"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
